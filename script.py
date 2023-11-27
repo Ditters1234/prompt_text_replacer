@@ -57,7 +57,6 @@ def input_modifier(string, state):
     mydata = json.loads(file_contents)
     
     for commands in mydata:
-        print(commands)
         for attribute, value in commands.items():
             string = string.replace(attribute, exec_with_return(value))
     
